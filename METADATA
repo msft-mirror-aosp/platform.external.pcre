@@ -7,16 +7,16 @@ third_party {
   }
   url {
     type: ARCHIVE
-    value: "https://github.com/PhilipHazel/pcre2/releases/download/pcre2-10.39/pcre2-10.39.tar.gz"
+    value: "https://github.com/PhilipHazel/pcre2/releases/download/pcre2-10.40/pcre2-10.40.tar.gz"
   }
-  version: "pcre2-10.39"
+  version: "pcre2-10.40"
   license_type: NOTICE
-  last_upgrade_date {
-    year: 2021
-    month: 10
-    day: 29
-  }
   security {
     tag: "NVD-CPE2.3:cpe:/a:pcre:pcre2"
+  }
+  last_upgrade_date {
+    year: 2022
+    month: 4
+    day: 15
   }
 }
