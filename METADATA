@@ -6,8 +6,8 @@ third_party {
     value: "https://www.pcre.org/"
   }
   url {
-    type: ARCHIVE
-    value: "https://github.com/PhilipHazel/pcre2/releases/download/pcre2-10.40/pcre2-10.40.tar.gz"
+    type: GIT
+    value: "https://github.com/PhilipHazel/pcre2/"
   }
   version: "pcre2-10.40"
   license_type: NOTICE
