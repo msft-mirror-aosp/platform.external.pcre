@@ -11,13 +11,13 @@ third_party {
   }
   last_upgrade_date {
     year: 2024
-    month: 2
-    day: 20
+    month: 6
+    day: 7
   }
   homepage: "https://www.pcre.org/"
   identifier {
     type: "Git"
     value: "https://github.com/PCRE2Project/pcre2/"
-    version: "pcre2-10.43"
+    version: "pcre2-10.44"
   }
 }
