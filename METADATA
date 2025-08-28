@@ -7,7 +7,7 @@ description: "The PCRE library is a set of functions that implement regular expr
 third_party {
   license_type: NOTICE
   security {
-    tag: "NVD-CPE2.3:cpe:/a:pcre:pcre2:2-10.45"
+    tag: "NVD-CPE2.3:cpe:/a:pcre:pcre2:2-10.46"
   }
   last_upgrade_date {
     year: 2025
@@ -18,6 +18,6 @@ third_party {
   identifier {
     type: "Git"
     value: "https://github.com/PCRE2Project/pcre2/"
-    version: "pcre2-10.45"
+    version: "pcre2-10.46"
   }
 }
