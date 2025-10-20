@@ -53,14 +53,23 @@ sure both macros are undefined; an emulation function will then be used. */
    LF does in an ASCII/Unicode environment. */
 /* #undef EBCDIC_NL25 */
 
+/* Define to 1 if you have the <assert.h> header file. */
+#define HAVE_ASSERT_H 1
+
 /* Define this if your compiler supports __attribute__((uninitialized)) */
 #define HAVE_ATTRIBUTE_UNINITIALIZED 1
 
 /* Define to 1 if you have the 'bcopy' function. */
 #define HAVE_BCOPY 1
 
+/* Define this if your compiler provides __assume() */
+/* #undef HAVE_BUILTIN_ASSUME */
+
 /* Define this if your compiler provides __builtin_mul_overflow() */
 #define HAVE_BUILTIN_MUL_OVERFLOW 1
+
+/* Define this if your compiler provides __builtin_unreachable() */
+#define HAVE_BUILTIN_UNREACHABLE 1
 
 /* Define to 1 if you have the <bzlib.h> header file. */
 /* #undef HAVE_BZLIB_H */
@@ -146,7 +155,8 @@ sure both macros are undefined; an emulation function will then be used. */
 /* Define to 1 if you have the <unistd.h> header file. */
 #define HAVE_UNISTD_H 1
 
-/* Define to 1 if the compiler supports simple visibility declarations. */
+/* Define to 1 if the compiler supports GCC compatible visibility
+   declarations. */
 #define HAVE_VISIBILITY 1
 
 /* Define to 1 if you have the <wchar.h> header file. */
@@ -202,7 +212,7 @@ sure both macros are undefined; an emulation function will then be used. */
 /* This limit is parameterized just in case anybody ever wants to change it.
    Care must be taken if it is increased, because it guards against integer
    overflow caused by enormously large patterns. */
-#define MAX_NAME_SIZE 32
+#define MAX_NAME_SIZE 128
 
 /* The value of MAX_VARLOOKBEHIND specifies the default maximum length, in
    characters, for a variable-length lookbehind assertion. */
@@ -227,7 +237,7 @@ sure both macros are undefined; an emulation function will then be used. */
 #define PACKAGE_NAME "PCRE2"
 
 /* Define to the full name and version of this package. */
-#define PACKAGE_STRING "PCRE2 10.43"
+#define PACKAGE_STRING "PCRE2 10.46"
 
 /* Define to the one symbol short name of this package. */
 #define PACKAGE_TARNAME "pcre2"
@@ -236,7 +246,7 @@ sure both macros are undefined; an emulation function will then be used. */
 #define PACKAGE_URL ""
 
 /* Define to the version of this package. */
-#define PACKAGE_VERSION "10.43"
+#define PACKAGE_VERSION "10.46"
 
 /* The value of PARENS_NEST_LIMIT specifies the maximum depth of nested
    parentheses (of any kind) in a pattern. This limits the amount of system
@@ -274,7 +284,7 @@ sure both macros are undefined; an emulation function will then be used. */
    This macro apears at the start of every exported function that is part
    of the external API. It does not appear on functions that are "external"
    in the C sense, but which are internal to the library. */
-#define PCRE2_EXP_DEFN
+/* #undef PCRE2_EXP_DEFN */
 
 /* Define to any value if linking statically (TODO: make nice with Libtool) */
 /* #undef PCRE2_STATIC */
@@ -406,7 +416,7 @@ sure both macros are undefined; an emulation function will then be used. */
 #endif
 /* Enable extensions specified by C23 Annex F.  */
 #ifndef __STDC_WANT_IEC_60559_EXT__
-/* # undef __STDC_WANT_IEC_60559_EXT__ */
+# define __STDC_WANT_IEC_60559_EXT__ 1
 #endif
 /* Enable extensions specified by ISO/IEC TS 18661-4:2015.  */
 #ifndef __STDC_WANT_IEC_60559_FUNCS_EXT__
@@ -434,8 +444,15 @@ sure both macros are undefined; an emulation function will then be used. */
 /* # undef _XOPEN_SOURCE */
 #endif
 
+
 /* Version number of package */
-#define VERSION "10.43"
+#define VERSION "10.46"
+
+/* Number of bits in a file offset, on hosts where this is settable. */
+/* #undef _FILE_OFFSET_BITS */
+
+/* Define to 1 on platforms where this makes off_t a 64-bit type. */
+/* #undef _LARGE_FILES */
 
 /* Number of bits in time_t, on hosts where this is settable. */
 /* #undef _TIME_BITS */
