@@ -18,6 +18,7 @@ third_party {
   identifier {
     type: "Git"
     value: "https://github.com/PCRE2Project/pcre2/"
-    version: "pcre2-10.46"
+    version: "56c87ccac13b01c3c1ecdf71e4fc2fedccea50a2"
+    closest_version: "pcre2-10.46"
   }
 }
