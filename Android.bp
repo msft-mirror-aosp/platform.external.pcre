@@ -63,6 +63,11 @@ cc_library {
     ramdisk_available: true,
     vendor_ramdisk_available: true,
     recovery_available: true,
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+    min_sdk_version: "apex_inherit",
     srcs: [
         "src/pcre2_auto_possess.c",
         "src/pcre2_chartables.c",
