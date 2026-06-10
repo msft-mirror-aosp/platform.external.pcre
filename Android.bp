@@ -109,6 +109,11 @@ cc_library {
         },
         windows: {
             enabled: true,
+            static: {
+                // Consumers of this static library on Windows also need to add "-DPCRE2_STATIC"
+                // to their own cflags, as Soong does not export cflags for static libraries.
+                cflags: ["-DPCRE2_STATIC"],
+            },
         },
     },
 }
