@@ -47,6 +47,10 @@ cc_defaults {
         "include",
     ],
     export_include_dirs: ["include"],
+    // include/pcre2.h has `#include "../src/pcre2.h.generic"`, which is included by libselinux
+    extra_export_include_dirs_deps: [
+        "src/pcre2.h.generic",
+    ],
 }
 
 //
